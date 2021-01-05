@@ -1,0 +1,79 @@
+import org.codehaus.groovy.runtime.EncodingGroovyMethods
+
+import java.nio.ByteBuffer
+import groovy.json.*
+
+/**
+ * @param data 设备上传数据
+ * @return Map 必须包含:
+ * length 已处理的长度,
+ * model 数据类型: 1表示命令回复，2表示数据上传, 3表示设备发送的心跳包
+ * response 返回数据: 命令回复是uuid和属性值，数据上传是属性名和属性值
+ */
+def parsePubData(byte[] data) {
+    def result = [:]
+    result.length = 0
+    if (data.length < 2) {
+        return result
+    }
+
+    String symbol = new String(data[0..0] as byte[])
+    //测试注解
+    if (symbol == "#") //"#" 表示该数据为命令回复
+    {
+        int length = (data[1] & 0xFF * 256) + (data[2] & 0xFF)
+        if (length < 36) //uuid长度为36位
+        {
+            return result
+        } else {
+            if (length + 3 > data.length) {
+                return result
+            }
+            byte[] responseBytes = data[3..length + 2] as byte[]
+            def jsonSlurper = new JsonSlurper()
+            def response = jsonSlurper.parse(responseBytes)
+            result.length = length + 3
+            result.model = 1
+            result.response = response
+            return result
+        }
+    } else if (symbol == "^")// "^" 表示该条数据为设备心跳数据
+    {
+        if (data.length < 4) {
+            return result
+        }
+        result.length = 4
+        result.model = 3
+        return result
+    } else {
+        int length = (data[0] & 0xFF * 256) + (data[1] & 0xFF)
+        if (length + 2 > data.length) {
+            return result
+        }
+        String json = new String(data[2..2 + length - 1] as byte[])
+        def jsonSlurper = new JsonSlurper()
+        Map response = jsonSlurper.parseText(json)
+        result.length = length + 2
+        result.model = 2
+        result.response = response
+        if (response.get("someBytes") != null) {
+            result.response.putAt("someBytes",EncodingGroovyMethods.decodeBase64(response.get("someBytes")))
+        }
+        return result
+    }
+}
+
+/**
+ * 解析命令下发到设备
+ * @param uuid 该命令的唯一id
+ * @param params 读命令为string[] 类型属性值名称，写命令为map类型的属性名和属性值的键值对
+ * @param functionType
+ * @return
+ */
+def parseCommandData(String uuid, Object params, String functionType) {
+    def data = [:]
+    data.uuid = uuid
+    data.functionType = functionType
+    data.params = params
+    return new JsonBuilder(data).toPrettyString()
+}

@@ -1,0 +1,9 @@
+{
+    "method": "update",
+    "state": {
+        "reported": {
+            "someString": "shadow string"
+        }
+    },
+    "version": 1
+}

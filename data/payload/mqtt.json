@@ -1,0 +1,28 @@
+{
+    "params": {
+        "someBoolean": {
+            "value": false
+        },
+        "someDate": {
+            "value": 1594604139000
+        },
+        "someDouble": {
+            "value": 999999.999999999
+        },
+        "someEnum": {
+            "value":0 
+        },
+        "someFloat": {
+            "value": 999.999
+        },
+        "someInteger": {
+            "value": 2147483647
+        },
+        "someLong": {
+            "value": 999999999999999
+        },
+        "someString": {
+            "value": "test string"
+        }
+    }
+}

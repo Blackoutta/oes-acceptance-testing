@@ -1,0 +1,10 @@
+{
+    "someDouble": 999999.999999999,
+    "someDate": 1594620860000,
+    "someEnum": 20,
+    "someFloat": 999.999,
+    "someInteger": 2147483647,
+    "someLong": 999999999999999,
+    "someBoolean": false,
+    "someString": "test string"
+}

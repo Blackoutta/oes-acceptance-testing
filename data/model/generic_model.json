@@ -1,0 +1,252 @@
+[
+  {
+    "nodeName": "",
+    "identifier": "someDate",
+    "minString": "0",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 8,
+    "maxString": "0",
+    "required": false,
+    "special": {
+      "length": null,
+      "step": null,
+      "enumArray": null
+    },
+    "unit": "some_unit",
+    "name": "someDate",
+    "maximum": 0,
+    "minimum": 0,
+    "class": 1
+  },
+  {
+    "nodeName": "",
+    "identifier": "someEnum",
+    "minString": "0",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 9,
+    "maxString": "0",
+    "required": false,
+    "special": {
+      "length": null,
+      "step": null,
+      "enumArray": [
+        {
+          "describe": "val_1",
+          "key": 1
+        },
+        {
+          "describe": "val_2",
+          "key": 2
+        },
+        {
+          "describe": "val_3",
+          "key": 3
+        },
+        {
+          "describe": "val_4",
+          "key": 4
+        },
+        {
+          "describe": "val_5",
+          "key": 5
+        },
+        {
+          "describe": "val_6",
+          "key": 6
+        },
+        {
+          "describe": "val_7",
+          "key": 7
+        },
+        {
+          "describe": "val_8",
+          "key": 8
+        },
+        {
+          "describe": "val_9",
+          "key": 9
+        },
+        {
+          "describe": "val_10",
+          "key": 10
+        },
+        {
+          "describe": "val_11",
+          "key": 11
+        },
+        {
+          "describe": "val_12",
+          "key": 12
+        },
+        {
+          "describe": "val_13",
+          "key": 13
+        },
+        {
+          "describe": "val_14",
+          "key": 14
+        },
+        {
+          "describe": "val_15",
+          "key": 15
+        },
+        {
+          "describe": "val_16",
+          "key": 16
+        },
+        {
+          "describe": "val_17",
+          "key": 17
+        },
+        {
+          "describe": "val_18",
+          "key": 18
+        },
+        {
+          "describe": "val_19",
+          "key": 19
+        },
+        {
+          "describe": "val_20",
+          "key": 20
+        }
+      ]
+    },
+    "unit": "some_unit",
+    "name": "someEnum",
+    "maximum": 0,
+    "minimum": 0,
+    "class": 1
+  },
+  {
+    "nodeName": "",
+    "identifier": "someBoolean",
+    "minString": "0",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 2,
+    "maxString": "0",
+    "required": false,
+    "special": {
+      "length": null,
+      "step": null,
+      "enumArray": [
+        {
+          "describe": "false",
+          "key": 0
+        },
+        {
+          "describe": "true",
+          "key": 1
+        }
+      ]
+    },
+    "unit": "some_unit",
+    "name": "someBoolean",
+    "maximum": 0,
+    "minimum": 0,
+    "class": 1
+  },
+  {
+    "nodeName": "",
+    "identifier": "someFloat",
+    "minString": "-999.999",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 5,
+    "maxString": "999.999",
+    "required": false,
+    "special": {
+      "length": null,
+      "step": 0.001,
+      "enumArray": null
+    },
+    "unit": "some_unit",
+    "name": "someFloat",
+    "maximum": 999.999,
+    "minimum": -999.999,
+    "class": 1
+  },
+  {
+    "nodeName": "",
+    "identifier": "someLong",
+    "minString": "-999999999999999",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 4,
+    "maxString": "999999999999999",
+    "required": false,
+    "special": {
+      "length": null,
+      "step": 1,
+      "enumArray": null
+    },
+    "unit": "some_unit",
+    "name": "someLong",
+    "maximum": 999999999999999,
+    "minimum": -999999999999999,
+    "class": 1
+  },
+  {
+    "nodeName": "",
+    "identifier": "someInteger",
+    "minString": "-2147483648",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 3,
+    "maxString": "2147483647",
+    "required": false,
+    "special": {
+      "length": null,
+      "step": 1,
+      "enumArray": null
+    },
+    "unit": "some_unit",
+    "name": "someInteger",
+    "maximum": 2147483647,
+    "minimum": -2147483648,
+    "class": 1
+  },
+  {
+    "nodeName": "",
+    "identifier": "someString",
+    "minString": "0",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 1,
+    "maxString": "0",
+    "required": false,
+    "special": {
+      "length": 2048,
+      "step": null,
+      "enumArray": null
+    },
+    "unit": "some_unit",
+    "name": "someString",
+    "maximum": 0,
+    "minimum": 0,
+    "class": 1
+  },
+  {
+    "nodeName": "",
+    "identifier": "someDouble",
+    "minString": "-999999.999999999",
+    "kind": 2,
+    "accessMode": 2,
+    "type": 6,
+    "maxString": "999999.999999999",
+    "required": false,
+    "special": {
+      "length": null,
+      "step": 1e-9,
+      "enumArray": null
+    },
+    "unit": "some_unit",
+    "name": "someDouble",
+    "maximum": 999999.999999999,
+    "minimum": -999999.999999999,
+    "class": 1
+  }
+]

@@ -1,0 +1,18 @@
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+
+byte[] convertDeviceData(byte[] data){
+    def jsonSlurper = new JsonSlurper()
+    def parse = jsonSlurper.parse(data)
+    def result = [:]
+    parse.getAt("params").each {
+        k,v-> result[k] = v.getAt("value")
+    }
+    return new JsonBuilder(result).toPrettyString().getBytes()
+}
+byte[] serializeCommand(byte[] data){
+    return data
+}
+byte[] serializeCommandRes(byte[] data){
+    return data
+}
