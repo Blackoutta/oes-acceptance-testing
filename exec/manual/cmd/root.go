@@ -13,7 +13,7 @@ var wg sync.WaitGroup
 var rootCmd = &cobra.Command{
 	Use:   "oes-sim",
 	Short: "OES设备模拟器",
-	Long:  "OneNET智能边缘计算套件设备模拟器，支持协议：mqtt, mqtt透传，tcp透传，modbus rtu over tcp, lwm2m, http",
+	Long:  "智能边缘计算套件设备模拟器，支持协议：mqtt, mqtt透传，tcp透传，modbus rtu over tcp, lwm2m, http",
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
 	},

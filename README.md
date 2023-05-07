@@ -1,19 +1,18 @@
 # 边缘计算套件验收助手
 ## 关于本项目
-本项目为OneNET智能边缘计算套件的测试验证工作提供辅助，同时包含自动化测试脚本和设备模拟器。自动化测试脚本用于验证流程，设备模拟器用于演示或Debug。
+本项目为智能边缘计算套件的测试验证工作提供辅助，同时包含自动化测试脚本和设备模拟器。自动化测试脚本用于验证流程，设备模拟器用于演示或Debug。
 
 ## 目录
-- [OneNET智能边缘计算套件验收助手](#onenet智能边缘计算套件验收助手)
-  - [关于本项目](#关于本项目)
-  - [目录](#目录)
-  - [手动测试用设备模拟器使用说明](#手动测试用设备模拟器使用说明)
-    - [快速开始](#快速开始)
-    - [MQTT设备使用动态注册(即产品级鉴权)](#mqtt设备使用动态注册即产品级鉴权)
-  - [自动化验收测试程序使用说明](#自动化验收测试程序使用说明)
-    - [Docker执行](#docker执行)
-    - [非Docker运行 (以非docker形式运行数据路由场景需安装额外依赖:librdkafka，安装指南见pkg/helpers/notes/how-to-install-librdkafka文件)](#非docker运行-以非docker形式运行数据路由场景需安装额外依赖librdkafka安装指南见pkghelpersnoteshow-to-install-librdkafka文件)
-    - [配置文件示例](#配置文件示例)
-    - [测试用例参考](#测试用例参考)
+- [边缘计算套件验收助手](#边缘计算套件验收助手)
+	- [关于本项目](#关于本项目)
+	- [目录](#目录)
+	- [手动测试用设备模拟器使用说明](#手动测试用设备模拟器使用说明)
+		- [快速开始](#快速开始)
+		- [MQTT设备使用动态注册(即产品级鉴权)](#mqtt设备使用动态注册即产品级鉴权)
+	- [自动化验收测试程序使用说明](#自动化验收测试程序使用说明)
+		- [Docker执行](#docker执行)
+		- [非Docker运行 (以非docker形式运行数据路由场景需安装额外依赖:librdkafka，安装指南见pkg/helpers/notes/how-to-install-librdkafka文件)](#非docker运行-以非docker形式运行数据路由场景需安装额外依赖librdkafka安装指南见pkghelpersnoteshow-to-install-librdkafka文件)
+		- [配置文件示例](#配置文件示例)
 
 ## 手动测试用设备模拟器使用说明
 ### 快速开始
@@ -26,7 +25,7 @@ oes-sim-windows.exe // Windows运行此文件
 
 可以看到打印出来的程序帮助文档：
 ```
-OneNET智能边缘计算套件设备模拟器，支持协议：mqtt, mqtt透传，tcp透传，modbus rtu over tcp, lwm2m, http
+智能边缘计算套件设备模拟器，支持协议：mqtt, mqtt透传，tcp透传，modbus rtu over tcp, lwm2m, http
 
 Usage:
   oes-sim [flags]
